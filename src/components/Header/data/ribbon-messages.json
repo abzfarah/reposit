@@ -1,0 +1,22 @@
+[
+  {
+    "text": "We are hiring",
+    "probability": 0,
+    "link": ""
+  },
+  {
+    "text": "Free JWT Book",
+    "probability": 0.3333333333333333,
+    "link": ""
+  },
+  {
+    "text": "Free ng1 to ng2 Book",
+    "probability": 0.3333333333333333,
+    "link": ""
+  },
+  {
+    "text": "",
+    "probability": 0.3333333333333333,
+    "link": ""
+  }
+]

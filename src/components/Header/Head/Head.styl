@@ -1,0 +1,190 @@
+@import '../styles/base'
+
+.head
+  clearfix()
+  position relative
+
+  &.theme-dark
+    +breakpoint("desktop")
+      .logo
+        background-image url("https://cdn.auth0.com/styleguide/latest/lib/logos/img/logo-grey.png")
+
+
+  +breakpoint("desktop", "max")
+    &.dropdownOpen
+      background-color white
+
+      &:before
+        content ''
+        display block
+        position absolute
+        z-index 1
+        width calc(100% + 30px)
+        left -15px
+        height 15px
+        top 100%
+        background linear-gradient(to bottom, white 0%, rgba(255, 255, 255, .001) 100%)
+
+  +breakpoint("desktop")
+    float left
+
+
+.brand
+  float left
+  position relative
+  margin-left $navbar-padding-horizontal
+  margin 0
+  width 100px
+  height 36px
+  vertical-center-elem(36px, $navbar-mobile-height)
+
+  +breakpoint("desktop")
+    vertical-center-elem(36px, $navbar-desktop-height)
+
+.logo
+  display block
+  width 125%
+  height 100%
+  background-image url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMjY2cHgiIGhlaWdodD0iNjhweCIgdmlld0JveD0iLTExNiAyMTcgMjY2IDY4IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IC0xMTYgMjE3IDI2NiA2ODsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6IzRENEQ0Rjt9DQoJLnN0MXtmaWxsOiMzRkE4RDU7fQ0KPC9zdHlsZT4NCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0tMTMuOSwyMzYuM2MyLjYsMCw0LjEsMS4xLDQuMSwyLjljMCwxLjQtMC45LDIuMS0xLjEsMmMtMC44LTAuNy0xLjgtMS4yLTMuNC0xLjJjLTUsMC03LDUuMy03LDEyLjV2MTENCgljMCwxLjQtMC43LDEuOC0xLjcsMS44aC0wLjRjLTEsMC0xLjctMC40LTEuNy0xLjh2LTI2LjNjMC0wLjEsMC42LTAuNCwxLjMtMC40YzEuMywwLDIuNSwwLjYsMi41LDMuN3YxLjcNCglDLTIwLjEsMjM4LjMtMTcuNywyMzYuMy0xMy45LDIzNi4zIi8+DQo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTYuMSwyNDguOGMtMC40LTUuNi0zLjgtOS4yLTktOS4yYy01LjMsMC05LjMsMy44LTEwLjIsOS4ySDE2LjF6IE03LjQsMjYyLjRjNS41LDAsOC0yLjQsOS42LTUNCgljMC4xLTAuMiwyLjIsMC40LDIuMiwyLjJjMCwxLjktNC4zLDYuMy0xMS45LDYuM2MtOC42LDAtMTQuNS02LTE0LjUtMTQuNmMwLTguNiw2LTE0LjksMTQuMi0xNC45YzcuOSwwLDEzLjEsNS42LDEzLjEsMTQuMnYwLjQNCgljMCwxLjEtMC40LDEuMy0xLjYsMS4zSC0zLjNDLTMsMjU4LjEsMS41LDI2Mi40LDcuNCwyNjIuNCIvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTMwLjIsMjUyLjljMCw1LjQsNC43LDkuNSwxMCw5LjVjNiwwLDkuOS00LjYsOS45LTExLjRjMC02LjYtNC4xLTExLjQtOS44LTExLjRjLTQuOSwwLTguMywyLjYtMTAuMSw2LjcNCglMMzAuMiwyNTIuOUwzMC4yLDI1Mi45eiBNMzAuMywyNzQuOWMwLDEuNC0wLjcsMS44LTEuNywxLjhoLTAuNGMtMSwwLTEuNy0wLjQtMS43LTEuOHYtMzcuN2MwLTAuMSwwLjYtMC40LDEuMy0wLjQNCgljMS4zLDAsMi41LDAuNiwyLjUsMy43djEuMmMyLjUtMy40LDUuOC01LjQsMTAuNS01LjRjNy40LDAsMTMuMyw1LjgsMTMuMywxNC43cy01LjcsMTQuOC0xMy41LDE0LjhjLTUsMC04LjYtMi43LTEwLjItNS40djE0LjUNCglIMzAuM3oiLz4NCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik04My42LDI1MS4xYzAtNi42LTQuNS0xMS41LTEwLjYtMTEuNXMtMTAuNiw0LjgtMTAuNiwxMS4zYzAsNi42LDQuNSwxMS41LDEwLjYsMTEuNQ0KCUM3OSwyNjIuNCw4My42LDI1Ny43LDgzLjYsMjUxLjEgTTU4LjUsMjUxYzAtOC41LDYuMS0xNC43LDE0LjUtMTQuN3MxNC41LDYuMywxNC41LDE0LjhzLTYuMSwxNC43LTE0LjUsMTQuNw0KCUM2NC41LDI2NS44LDU4LjUsMjU5LjUsNTguNSwyNTEiLz4NCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik05MS43LDI2MC4xYzAtMS42LDEuOS0yLjIsMi4xLTIuMWMxLjksMi42LDUsNC41LDkuNiw0LjVjNC43LDAsNy4zLTEuOSw3LjMtNC43YzAtMy40LTMtNC4xLTguMy01LjINCgljLTQuNC0wLjktOS45LTIuMi05LjktNy45YzAtNSw0LjMtOC41LDEwLjctOC41YzYuOCwwLDEwLjQsMy4yLDEwLjQsNS40YzAsMS41LTIsMi4yLTIuMSwyYy0xLjYtMi40LTQuNC00LjEtOC4zLTQuMQ0KCWMtNC42LDAtNy4xLDEuOS03LjEsNC43YzAsMywyLjcsMy44LDcuOSw1YzQuNSwxLDEwLjMsMi4yLDEwLjMsOGMwLDUuMi00LjMsOC42LTExLjEsOC42Qzk1LjgsMjY1LjgsOTEuNywyNjIuMiw5MS43LDI2MC4xIi8+DQo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTIxLjIsMjYzLjV2LTI0LjljMC0xLjQsMC43LTEuOCwxLjctMS44aDAuNGMxLDAsMS43LDAuNCwxLjcsMS44djI0LjljMCwxLjQtMC43LDEuOC0xLjcsMS44aC0wLjQNCglDMTIxLjksMjY1LjMsMTIxLjIsMjY0LjksMTIxLjIsMjYzLjUgTTEyMC42LDIyNy40YzAtMS43LDAuOS0yLjUsMi42LTIuNWMxLjcsMCwyLjUsMC44LDIuNSwyLjVjMCwxLjctMC45LDIuNS0yLjYsMi41DQoJQzEyMS41LDIzMCwxMjAuNiwyMjkuMSwxMjAuNiwyMjcuNCIvPg0KPHBhdGggY2xhc3M9InN0MCIgZD0iTTEzMi44LDI0MC40Yy0xLjQsMC0xLjgtMC41LTEuOC0xLjV2LTAuNGMwLTEsMC40LTEuNSwxLjgtMS41aDIuNnYtNC45YzAtMS40LDAuNy0xLjgsMS43LTEuOGgwLjQNCgljMSwwLDEuNywwLjQsMS43LDEuOHY0LjloNy41YzEuNCwwLDEuOCwwLjUsMS44LDEuNXYwLjRjMCwxLTAuNCwxLjUtMS44LDEuNWgtNy41djE2YzAsNC4xLDEuMSw2LjEsNC4yLDYuMWMxLjksMCwzLjQtMC44LDQuNC0yLjENCgljMC4xLTAuMSwxLjMsMC40LDEuMywxLjljMCwxLjYtMi4xLDMuNS01LjgsMy41Yy01LjUsMC03LjktMy4xLTcuOS05di0xNi40SDEzMi44eiIvPg0KPHBhdGggY2xhc3M9InN0MSIgZD0iTS01MS41LDI0OC40bC0yMi45LDEzLjJjLTEsMC42LTQuNCwyLjUtNi43LDIuNWMtMiwwLTUuMi0xLjUtNi44LTIuNmwtMTguMi0xMC41bDE4LjQtMTAuNg0KCWMxLTAuNiw0LjQtMi41LDYuNy0yLjVjMiwwLDUuMiwxLjUsNi43LDIuNWMxLjQsMC45LDMuMiwwLjUsNC4xLTAuOWMwLjktMS40LDAuNS0zLjItMC45LTQuMWMtMC42LTAuNC01LjYtMy40LTkuOS0zLjQNCgljLTQuNCwwLTkuMywzLjEtOS44LDMuNGwtMjIuNywxM2MtMC45LDAuNS0xLjUsMS42LTEuNSwyLjZzMC42LDIsMS41LDIuNmwyMi42LDEzYzAuNSwwLjMsNS41LDMuNCw5LjksMy40czkuMy0zLjEsOS44LTMuNA0KCWwyMi44LTEzLjFjMS40LTAuOCwxLjktMi42LDEuMS00LjFDLTQ4LjIsMjQ4LjEtNTAuMSwyNDcuNi01MS41LDI0OC40Ii8+DQo8cGF0aCBjbGFzcz0ic3QxIiBkPSJNLTUxLjUsMjYyLjVsLTIyLjksMTMuM2MtMSwwLjYtNC40LDIuNS02LjcsMi41Yy0yLDAtNS4yLTEuNS02LjgtMi42bC0yMi42LTEzLjFjLTEuNC0wLjgtMy4yLTAuMy00LjEsMS4xDQoJYy0wLjgsMS40LTAuMywzLjIsMS4xLDQuMWwyMi42LDEzYzAuNSwwLjMsNS41LDMuNCw5LjksMy40czkuMy0zLjEsOS44LTMuNGwyMi44LTEzLjFjMS40LTAuOCwxLjktMi42LDEuMS00LjENCglDLTQ4LjIsMjYyLjItNTAuMSwyNjEuNy01MS41LDI2Mi41Ii8+DQo8cGF0aCBjbGFzcz0ic3QxIiBkPSJNLTExMC41LDIzOS41bDIyLjgtMTMuMmMxLTAuNiw0LjQtMi41LDYuNy0yLjVjMiwwLDUuMiwxLjUsNi44LDIuNmwxOC4zLDEwLjVsLTE4LjUsMTAuNg0KCWMtMSwwLjYtNC40LDIuNS02LjcsMi41Yy0yLDAtNS4yLTEuNS02LjctMi41Yy0xLjQtMC45LTMuMi0wLjUtNC4xLDAuOWMtMC45LDEuNC0wLjUsMy4yLDAuOSw0LjFjMC41LDAuMyw1LjUsMy40LDkuOSwzLjQNCgljNC40LDAsOS4zLTMuMSw5LjgtMy40bDIyLjgtMTMuMmMwLjktMC41LDEuNS0xLjUsMS41LTIuNmMwLTEuMS0wLjYtMi0xLjUtMi42bC0yMi42LTEzYy0wLjUtMC4zLTUuNS0zLjQtOS45LTMuNHMtOS4zLDMuMS05LjgsMy40DQoJbC0yMi43LDEzLjJjLTEuNCwwLjgtMS45LDIuNi0xLjEsNC4xQy0xMTMuOCwyMzkuOC0xMTIsMjQwLjMtMTEwLjUsMjM5LjUiLz4NCjwvc3ZnPg0K')
+  background-size contain
+  background-repeat no-repeat
+  font-size 0
+  color rgba(0, 0, 0, 0)
+
+
+.featured
+  display block
+  position absolute
+  top: 50%;
+  left calc(100% + 10px)
+  transform translateY(-50%)
+  background $color-blue-light
+  text-transform uppercase
+  text-decoration none
+  font-weight 500
+  padding: 5px 8px;
+  border-radius 3px
+  color white !important
+  font-size 11px
+  line-height: 15px;
+  text-align center
+  transform: translateY(-50%);
+  animation-name: bounce;
+  transform-origin: center bottom;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  min-width: 105px
+
+  +breakpoint("desktop")
+    right calc(100% + 10px)
+    left: auto;
+
+  +breakpoint("desktop")
+    +breakpoint("desktop-hd", "max")
+      display none
+
+  // Caret
+  &:after
+    position: absolute;
+    content: "";
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    transform: translateY(-50%);
+
+    +breakpoint("desktop", "max")
+      left: -4px;
+      border-right: 5px solid #44C7F4;
+      border-left: 0;
+
+    +breakpoint("desktop")
+      right: -4px;
+      border-right: 0;
+      border-left: 5px solid #44C7F4;
+
+@keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,-50%,0);
+  }
+
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -70%, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -60%, 0);
+  }
+
+  90% {
+    transform: translate3d(0,-52%,0);
+  }
+}
+
+
+.toggleButton
+  position relative
+  float right
+  margin-right ($navbar-padding-horizontal - 10px)
+  padding 8px
+  width 26px
+  background-color transparent
+  border 0
+  vertical-center-elem(20px, $navbar-mobile-height)
+
+  &.closeButton .iconBar
+    &:nth-of-type(2)
+      top 10px
+      width 0%
+      left 50%
+      opacity 0
+
+    &:nth-of-type(3)
+      transform rotate(45deg)
+
+    &:nth-of-type(4)
+      transform rotate(-45deg)
+
+    &:nth-of-type(5)
+      top 10px
+      width 0%
+      left 50%
+      opacity 0
+
+  &:hover,
+  &:focus
+    outline 0
+
+  // Bars
+  .iconBar
+    display block
+    position absolute
+    width 100%
+    height 2px
+    left 0
+    right 0
+    background-color $navbar-toggle-background-color
+    transition .25s ease-in-out
+
+    &:nth-of-type(2)
+      top 0
+
+    &:nth-of-type(3)
+      top 50%
+      transform translateY(-50%)
+
+    &:nth-of-type(4)
+      top 50%
+      transform translateY(-50%)
+
+    &:nth-of-type(5)
+      top calc(100% - 2px)
+
+
+  // Hide at desktop view
+  +breakpoint("desktop")
+    display none

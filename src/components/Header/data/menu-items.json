@@ -1,0 +1,210 @@
+[
+  {
+    "name": "Products",
+    "id": "products",
+    "simpleList": true,
+    "mobileHref": "",
+    "childrens": [
+      {
+        "componentType": "list",
+        "key": "product-list",
+        "items": [
+          {
+            "name": "LG Chem’s RESU",
+            "id": "platform",
+            "href": "",
+            "icon": "auth0"
+          },
+          {
+            "name": "Pylontech",
+            "id": "enterprise",
+            "href": "",
+            "icon": "auth0"
+          },
+          {
+            "name": "Tesla Powerwall",
+            "id": "lock",
+            "href": "",
+            "icon": "auth0"
+          },
+          {
+            "name": "Samsung All in One ESS",
+            "id": "passwordless",
+            "href": "",
+            "icon": "auth0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Solutions",
+    "id": "solutions",
+    "dropdownClass": "solutionsDropdown",
+    "mobileHref": "",
+    "childrens": [
+      {
+        "componentType": "list",
+        "key": "solution-list",
+        "stackedList": true,
+        "items": [
+          {
+            "name": "Reposit for your Customers",
+            "customClass": "solutionsItem",
+            "icon": "b2c",
+            "id": "b2c",
+            "href": "",
+            "alt": "B2C icon"
+          },
+          {
+            "name": "Reposit for your Business Partners",
+            "customClass": "solutionsItem",
+            "icon": "b2b",
+            "id": "b2b",
+            "href": "",
+            "alt": "B2B icon"
+          }
+        ]
+      },
+      {
+        "componentType": "list",
+        "title": "Learn more about Reposit Power",
+        "key": "learn-about-auth0-list",
+        "twoColLayout": true,
+        "items": [
+          {
+            "name": "Overview",
+            "id": "overview",
+            "href": ""
+          },
+          {
+            "name": "Customers",
+            "id": "customers",
+            "href": ""
+          },
+          {
+            "name": "Case Studies",
+            "id": "learn-case-studies",
+            "href": "",
+            "external": true
+          },
+          {
+            "name": "Concepts",
+            "id": "learn-concepts",
+            "href": "",
+            "external": true
+          },
+          {
+            "name": "Use Cases",
+            "id": "learn-use-cases",
+            "href": "",
+            "external": true
+          },
+          {
+            "name": "Industries",
+            "id": "learn-industries",
+            "href": "",
+            "external": true
+          },
+          {
+            "name": "Others",
+            "id": "learn-growth",
+            "href": "",
+            "external": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Pricing",
+    "id": "pricing",
+    "href": ""
+  },
+  {
+    "name": "Documentation",
+    "id": "documentation",
+    "href": "",
+    "external": true
+  },
+  {
+    "name": "More",
+    "id": "more",
+    "dropdownClass": "moreDropdown",
+    "childrens": [
+      {
+        "componentType": "list",
+        "title": "Additional info",
+        "key": "adittional-list",
+        "items": [
+          {
+            "name": "About",
+            "id": "about",
+            "href": ""
+          },
+          {
+            "name": "Support",
+            "id": "support",
+            "href": ""
+          },
+          {
+            "name": "Partners",
+            "id": "partners",
+            "href": ""
+          },
+          {
+            "name": "Press",
+            "id": "press",
+            "href": ""
+          }
+        ]
+      },
+      {
+        "componentType": "list",
+        "title": "Tech resources",
+        "key": "resources-list",
+        "items": [
+          {
+            "name": "Security",
+            "id": "security",
+            "href": ""
+          },
+          {
+            "name": "Availability",
+            "id": "availability",
+            "href": ""
+          },
+          {
+            "name": "Opensource",
+            "id": "opensource",
+            "href": ""
+          },
+          {
+            "name": "Jobs",
+            "id": "jobs",
+            "href": ""
+          }
+        ]
+      },
+      {
+        "componentType": "highlight",
+        "title": "Latest from Reposit Power blog",
+        "key": "last-blog",
+        "id": "last-blog",
+        "default": {
+          "componentTitle": "",
+          "avatar": "http://www.repositpower.com/wp-content/themes/web-reposit-public/assets/img/logo-icon-blue.svg",
+          "title": "Solve the energy crisis with homeowners",
+          "excerpt": "Reposit Power will today tell parliamentarians that homes and businesses with smart energy systems will solve the energy crisis, not battery farms.",
+          "link": "",
+          "external": true,
+          "author": "Prosper Otemuyiwa",
+          "thumbnail": "http://www.repositpower.com/wp-content/themes/web-reposit-public/assets/img/logo-icon-blue.svg",
+          "date": "November 23",
+          "fullDate": "2016-11-23T08:30:00+00:00"
+        }
+      }
+    ]
+  }
+]
+
